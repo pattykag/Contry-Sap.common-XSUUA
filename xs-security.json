@@ -1,0 +1,26 @@
+{
+    "xsappname": "statescountries",
+    "tenant-mode": "dedicated",
+    "description": "Security profile of called application",
+    "scopes": [
+        {
+            "name": "$XSAPPNAME.viewer",
+            "description": "viewer"
+        }
+    ],
+    "role-templates": [
+        {
+            "name": "viewer",
+            "description": "generated",
+            "scope-references": [
+                "$XSAPPNAME.viewer"
+            ],
+            "attribute-references": []
+        }
+    ],
+    "oauth2-configuration": {
+        "redirect-uris": [
+            "https://0a49b79ctrial-tests-statescountries-approuter.cfapps.us10.hana.ondemand.com/login/callback"
+        ]
+    }
+}
